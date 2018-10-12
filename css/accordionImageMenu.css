@@ -1,0 +1,121 @@
+/* Adjust the slider with this parameters */
+.image_slider
+{
+	background-color: #ED5929;
+    width: 100%;
+	position:relative;
+    overflow: hidden;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.accordionMenu
+{
+    overflow: hidden;
+    margin-left: 0%;
+
+}
+
+
+/* each item of the accordion properties */
+.accordionSlider_item
+{
+	background-color: #302A38;
+	height: 100%;
+    float: left;
+    overflow: hidden;
+    vertical-align: top;
+    margin-left: -20px;
+    -webkit-transition: width .1s;
+    -moz-transition: width .1s;
+    -o-transition: width .1s;
+    transition: width .1s;
+	/* rotate squares to seems in diagonal*/
+    -webkit-transform: translate3d(0, 0, 0) skew(-20deg, 0deg);
+    -moz-transform: translate3d(0, 0, 0) skew(-20deg, 0deg);
+    -ms-transform: translate3d(0, 0, 0) skew(-20deg, 0deg);
+    transform: translate3d(0, 0, 0) skew(-20deg, 0deg);
+	display: table-cell;
+    position: relative;
+}
+
+
+/* Fade out text when mouse pointer isn't over image. */
+
+.accordionSlider_item .accordionText a {
+  color: #ED5929;
+  margin-right:8%;
+  bottom:0; 
+  text-align: right;
+  position:relative;
+  float:right;
+  width:15%;
+  border-bottom:1px solid white;
+}
+
+/* Fade in text when mouse pointer is over image. */
+.accordionSlider_item:hover .accordionText{
+	opacity: 1;
+		font-family: "Titillium-Bold";
+	transition: opacity .1s ease-in-out;
+   -moz-transition: opacity .1s ease-in-out;
+   -webkit-transition: opacity .1s ease-in-out;
+   
+   
+}
+
+
+.accordionSlider_item:after {
+    content:'';
+    opacity:0;
+    -moz-transition: all .1s;
+    -webkit-transition: all .1s ;
+    transition: all .1s;
+	z-index: -1;
+}
+.accordionSlider_item:hover:after {
+    width:100%;
+    height:100%;
+    position:relative;
+    background-color:#000;
+    opacity:0.5;
+}
+
+.accordionImage{
+	height: 100%;
+	overflow: hidden; 
+    position: relative;
+	display: block;
+	
+}
+
+.accordionSlider_item:hover .accordionImage{
+	background-color:#00F;
+	width: 100%;
+	opacity: 0.5;
+	transition: brightness .1s ease-in-out;
+   -moz-transition: brightness .1s ease-in-out;
+   -webkit-transition: brightness .1s ease-in-out;
+   	transition: width .1s ease-in-out;
+   -moz-transition: width .1s ease-in-out;
+   -webkit-transition: width .1s ease-in-out;
+   
+   
+}
+
+
+
+.accordionText{
+   position: absolute;
+	color: white;
+	 -webkit-transform: translate3d(0, 0, 0) skew(20deg, 0deg);
+    -moz-transform: translate3d(0, 0, 0) skew(20deg, 0deg);
+    -ms-transform: translate3d(0, 0, 0) skew(20deg, 0deg);
+    transform: translate3d(0, 0, 0) skew(20deg, 0deg);
+    top: 5%;
+    left: 7%;
+		 float:right;
+		 opacity: 0;
+	
+}
+
